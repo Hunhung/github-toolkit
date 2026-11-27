@@ -33,4 +33,4 @@
 
 - `.cmd` / `.bat` 一律 **GBK + CRLF**（cmd 在中文系统按 GBK 解析），文件开头加 `chcp 936 >nul`
 - 按钮命名 = **症状 + `_点这个`**，不要用「一键修复」「工具包」这类看不出用途的名字
-- 路径里不写非 ASCII（用 `%USERPROFILE%` / `%APPDATA%` 代替 `C:\Users\你的用户名\...`）
+- 路径里不写非 ASCII（用 `%USERPROFILE%` / `%APPDATA%` 代替 `C:\Users\<你的用户名>\...`）
