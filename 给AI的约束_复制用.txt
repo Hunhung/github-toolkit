@@ -1,0 +1,39 @@
+【Git 提交身份铁律 · 任何帮我操作 GitHub 的场景都必须遵守�?
+本机 GitHub 账号：Hunhung（账�?ID�?7909766�?唯一正确的提交邮箱：
+    77909766+Hunhung@users.noreply.github.com
+
+�?一、绝对禁�?
+你不得自行编造、猜测、改写这个邮箱。以下写法全部错误，一旦使用，
+提交�?GitHub 上会显示为「无作者」，不计入贡献日历，事后必须重写历史才能补救�?
+  �?77909766+user.noreply@github.noreply.com      �?曾经真实踩过的坑
+  �?77909766+user.noreply@github.noreply.github.com
+  �?user@example.com
+  �?your-email@example.com
+  �?任何占位符、临时邮箱、公司邮�?
+�?二、每次提交前必须做的三步
+
+1) 检�?     git config user.email
+     git config user.name
+
+2) 不对就立刻改（只改当前仓库，不要动全局 ~/.gitconfig�?     git config user.email "77909766+Hunhung@users.noreply.github.com"
+     git config user.name "Hunhung"
+
+3) 推送后复核
+     git log -1 --format="%ae"
+   输出必须正好�?77909766+Hunhung@users.noreply.github.com
+
+�?三、原理（供你判断，不要省略）
+
+GitHub 只把「已绑定并验证到账号」的邮箱所对应的提交算作贡献�?邮箱错了 = 代码推上去了，但工分不算、头像墙缺一块�?正确格式�?账号ID + 用户�?+ @users.noreply.github.com，三段缺一不可�?
+�?四、本机网�?
+GitHub 必须走本地代理，直连会报 "Recv failure: Connection was reset"�?代理地址：http://127.0.0.1:12450
+
+推送失败时改用�?     git -c http.proxy=http://127.0.0.1:12450 -c https.proxy=http://127.0.0.1:12450 push ...
+
+�?五、顺手检�?
+推送完成后，提醒我看一眼仓库的 Commits 页面�?如果提交左边没有我的头像，说明邮箱又错了，立刻回来修�?
+�?六、常见误解（不要重复解释错）
+
+「贡献数比仓库数少」是伪命题：
+  Repositories = 我开了多少个仓库（空的也算）
+  Contributions = 过去 12 个月我干了多少次活（提交/issue/PR/review�?两者没有大小关系，不能互相比较�?

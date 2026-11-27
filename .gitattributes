@@ -1,0 +1,11 @@
+# .cmd / .bat 在中文 Windows 上是 GBK + CRLF，别被 autocrlf 改成 LF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# GBK 编码的纯文本，原样保存，不做换行转换
+*.txt -text
+
+*.md text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
